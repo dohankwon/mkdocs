@@ -1,7 +1,21 @@
+---
+# draft: true
+date: 2024-07-02
+authors:
+    - dohan
+categories:
+    - SSH
+tags:
+    - SSH
+slug: ssh-without-password
+---
+
 # 비밀번호 없이 SSH 접속하기
 
 `ssh-keygen`을 사용하면 SSH 원격 접속 시 비밀번호를 입력하지 않을 수 있다.
 이 글은 Windows 10의 Windows 터미널^Terminal^에서 우분트^Ubuntu^로 SSH 접속하는 것을 가정한다.
+
+<!-- more -->
 
 ## `ssh-keygen`으로 공유키 생성
 
@@ -72,8 +86,8 @@ id_rsa.pub                                                  100%  577     8.5KB/
 
 파일이 전송된 뒤 원격 서버에 비밀번호를 사용해서 접속한 후, `id_rsa.pub` 파일의 내용을 `.ssh/authorized_keys` 파일에 추가한다.
 
-```sh
-cat id_rsa.pub >> .ssh/authorized_keys
+```{.sh .no-copy}
+$ cat id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
 여기까지 작업을 한 다음에 Windows 터미널에서 SSH 원격 접속을 하면, 비밀번호를 요구하지 않고 바로 연결되는 것을 확인할 수 있다.

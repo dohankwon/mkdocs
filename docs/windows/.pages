@@ -3,5 +3,5 @@ nav:
     - wsl.md
     - make.md
     - curl.md
-    - terminal.md
-    - tips.md
+    - ssh-without-password.md
+    - Tip 모음: tips
