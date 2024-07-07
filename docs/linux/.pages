@@ -5,4 +5,5 @@ nav:
     - zsh.md
     - vim.md
     - apt.md
+    - bashrc.md
     - Tip 모음: tips

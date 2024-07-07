@@ -14,7 +14,7 @@ $ echo $SHELL
 설치에 필요한 `wget`, `curl`, `git`을 먼저 설치한다.
 
 ```sh
-sudo apt install wget cur git
+sudo apt install wget curl git
 ```
 
 다음으로 `zsh`을 설치한다.
