@@ -34,3 +34,10 @@ tasks:
         cmds:
             - docker image rm -f ${DOCKER_IMAGE_TAG}
             - docker image rm -f ${DOCKER_IMAGE_LATEST}
+    deploy:
+        desc: SS연구팀 MkDocs 배포
+        cmds:
+            - git checkout main
+            - git fetch
+            - git pull
+            - docker-compose -f docker-compose.prod.yml -p ${PROJECT} up -d
