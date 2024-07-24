@@ -6,19 +6,19 @@ tasks:
     up:
         desc: 도커 컴포즈 업(UP)
         cmds:
-            - docker-compose -p ${USER}_${PROJECT} up -d
+            - docker compose -p ${USER}_${PROJECT} up -d
     down:
         desc: 도커 컴포즈 다운(DOWN)
         cmds:
-            - docker-compose -p ${USER}_${PROJECT} down
+            - docker compose -p ${USER}_${PROJECT} down
     logs:
         desc: 도커 컴포즈 로그(LOG) 조회
         cmds:
-            - docker-compose -p ${USER}_${PROJECT} logs -f
+            - docker compose -p ${USER}_${PROJECT} logs -f
     ps:
         desc: 도커 컨테이너 상태(STATUS) 확인
         cmds:
-            - docker-compose -p ${USER}_${PROJECT} ps
+            - docker compose -p ${USER}_${PROJECT} ps
     build:
         desc: 도커 이미지 빌드(BUILD)
         cmds:
@@ -40,4 +40,4 @@ tasks:
             - git checkout main
             - git fetch
             - git pull
-            - docker-compose -f docker-compose.prod.yml -p ${PROJECT} up -d
+            - docker compose -f docker-compose.prod.yml -p ${PROJECT} up -d
